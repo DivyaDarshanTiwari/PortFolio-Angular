@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="navbar_left">
+        <h1>PortFolio</h1>
+    </div>
+    <div class="navbar_right" >
+        <div class="navbar_right_pages"  *ngFor="let item of pages">
+            @if(item == 'About'){
+                <a routerLink=""><p>{{item}}</p></a>
+            }
+            @else {
+                <a [routerLink]="item"><p>{{item}}</p></a>
+            }
+        </div>
+    </div>
+</nav>

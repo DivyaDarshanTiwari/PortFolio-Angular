@@ -1,0 +1,41 @@
+@import '../../shared_scss/bg_color';
+$padding_around:(
+    "s": 0.25rem,
+    "me": .5rem,
+    "l": 1rem,
+    "xl": 2rem
+);
+$border: 1px solid white;
+@mixin flexbox($justify,$align,$wrap){
+    display: flex;
+    justify-content: $justify;
+    align-content: $align;
+    flex-wrap: $wrap;
+    align-items: center
+}
+.navbar{
+    @include flexbox(space-between,center,wrap );
+    padding: 0px map-get($padding_around, xl );
+
+    #{&}_right{
+        @include flexbox(center,center ,wrap);
+
+        &_pages{
+            padding: map-get($padding_around, l );
+            a{
+                text-decoration: none;
+            }
+            p{
+                padding: map-get($padding_around, s );
+                transition: all .50s ease-in;
+                border-radius: .25rem;
+                transform: rotate(-50deg);
+                &:hover{
+                    border: $border;
+                    transform:rotate(0deg);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
