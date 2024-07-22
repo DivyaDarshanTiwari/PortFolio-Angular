@@ -1,1 +1,37 @@
-<p>about works!</p>
+<section class="about">
+  <div class="about_description">
+    <div class="intro">
+      <div class="intro_heading">
+        <h1>Description</h1>
+      </div>
+      <div class="intro_body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quae
+          nobis aperiam aliquid, atque dolor reprehenderit odit voluptas fugit
+          sit expedita! Dignissimos, cumque voluptatum cupiditate quaerat quod
+          harum cum nihil.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis
+          quis fuga veniam numquam aliquid ex et rem harum officiis iusto
+          expedita, sapiente possimus tempora rerum, doloremque aspernatur quod
+          ratione.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="characteristics">
+      <div class="characteristics_header">
+        <h5><i>// MY CHARACTERISTICS</i></h5>
+      </div>
+      <div class="characteristics_card">
+        <mat-card appearance="outlined" *ngFor="let item of characteristics">
+          <mat-card-content>{{item}}</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="about_img">
+    <img [src]="image" alt="My Image">
+  </div>
+</section>

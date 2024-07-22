@@ -1,0 +1,61 @@
+$bg-color: black;
+$text-color: white;
+
+@mixin theme($theme:true) {
+  @if $theme {
+    background-color: $bg-color;
+    color: $text-color;
+  }
+
+}
+$margin_padding: (
+  "s": 0.25rem,
+  "m": 0.5rem,
+  "l": 1rem,
+  "xl": 2rem,
+  "xxl": 4rem,
+);
+
+@function margin_pad($size) {
+  @return map-get($margin_padding, $size);
+}
+@mixin flex-box($wrap) {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  flex-wrap: $wrap;
+}
+.about {
+  margin: 6rem;
+  @include flex-box(nowrap);
+  #{&}_description {
+    .characteristics {
+      margin: margin_pad(l);
+      &_header {
+        h5 {
+          color: gray;
+        }
+      }
+      &_card {
+        @include flex-box(wrap);
+        mat-card {
+          @include theme(true);
+          margin: margin_pad(s);
+          width: 10rem;
+          &:hover{
+            cursor: pointer;
+            box-shadow: 2px 2px 2px grey;
+          }
+        }
+      }
+    }
+  }
+
+  #{&}_img {
+    max-width: 20rem;
+    margin: margin_pad(l);
+    img {
+      max-width: 100%;
+    }
+  }
+}
