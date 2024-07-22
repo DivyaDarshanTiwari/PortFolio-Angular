@@ -1,1 +1,40 @@
-<p>footer works!</p>
+<footer>
+    <section class="form">
+        <div>
+            <h5>Connect With Me</h5>
+        </div>
+        <div class="form_input">
+            <mat-form-field>
+              <mat-label>Enter your email</mat-label>
+              <input
+                matInput
+                placeholder="pat@example.com"
+                [formControl]="email"
+                (blur)="updateErrorMessage()"
+                required
+              />
+              @if (email.invalid) {
+                <mat-error>{{errorMessage()}}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts_sections">
+        <div class="email">
+          <h6>Email</h6>
+          <a href="mailto: {{mail_id}}">{{mail_id}}</a>
+        </div>
+        <div class="phone">
+          <h6>Phone</h6>
+          <a href="tel: +91{{phone_no}}">+91 {{phone_no}}</a>
+        </div>
+      </div>
+      <div class="contacts_sections">
+
+      </div>
+      <div class="contacts_sections">
+
+      </div>
+    </section>
+</footer>
