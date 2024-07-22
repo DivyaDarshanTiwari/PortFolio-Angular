@@ -5,23 +5,32 @@ $padding_around:(
     "l": 1rem,
     "xl": 2rem
 );
+@function padding($size){
+    @return map-get($padding_around,$size)
+}
 $border: 1px solid white;
 @mixin flexbox($justify,$align,$wrap){
     display: flex;
     justify-content: $justify;
     align-content: $align;
     flex-wrap: $wrap;
-    align-items: center
+    align-items:baseline
 }
 .navbar{
     @include flexbox(space-between,center,wrap );
-    padding: 0px map-get($padding_around, xl );
+    padding:padding(l) padding(xl);
+
+    #{&}_left{
+        h1{
+            font-size: 1.5rem;
+        }
+    }
 
     #{&}_right{
         @include flexbox(center,center ,wrap);
 
         &_pages{
-            padding: map-get($padding_around, l );
+            padding: padding(l);
             a{
                 text-decoration: none;
             }
