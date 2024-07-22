@@ -19,7 +19,6 @@ $border: 1px solid white;
 .navbar{
     @include flexbox(space-between,center,wrap );
     padding:padding(l) padding(xl);
-
     #{&}_left{
         h1{
             font-size: 1.5rem;
