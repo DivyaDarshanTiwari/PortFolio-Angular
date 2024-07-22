@@ -29,6 +29,7 @@ $margin_padding: (
   margin: 6rem;
   @include flex-box(nowrap);
   #{&}_description {
+    padding: 0 margin_pad(xxl);
     .characteristics {
       margin: margin_pad(l);
       &_header {
