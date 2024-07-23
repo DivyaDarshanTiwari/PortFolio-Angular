@@ -46,7 +46,7 @@ export class FooterComponent {
   protected icons:key_value[] = [
     {key: "Github.png", value: "https://github.com/DivyaDarshanTiwari"},
     {key: " LeetCode.webp", value: "https://leetcode.com/u/g5BkYAHUbI/"},
-    {key: "linkdin.png", value: "www.linkedin.com/in/divya-darshan-tiwari-9b6981240/"}
+    {key: "linkdin.png", value: "https://www.linkedin.com/in/divya-darshan-tiwari-9b6981240/"}
   ]
 }
 
