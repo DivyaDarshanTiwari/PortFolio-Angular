@@ -1,0 +1,32 @@
+<section class="slider-section">
+  <div class="card-container">
+    <div class="images" *ngFor="let i of item">
+        <img
+          [src]="i.img"
+          alt="{{ i.alt }}"
+        />
+    </div>
+  </div>
+
+  <button
+    mat-mini-fab
+    aria-label="Example icon button with a menu icon"
+    class="prev"
+    color="primary"
+    #prevButton
+    (click)="prevfun()"
+  >
+    <mat-icon>arrow_back_ios</mat-icon>
+  </button>
+
+  <button
+    mat-mini-fab
+    aria-label="Example icon button with a menu icon"
+    class="next"
+    color="primary"
+    #nextButton
+    (click)="nextfun()"
+  >
+    <mat-icon>arrow_forward_ios</mat-icon>
+  </button>
+</section>
