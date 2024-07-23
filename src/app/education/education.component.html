@@ -1,19 +1,56 @@
 <div class="container">
-    <section class="education">
-        <div class="education_header">
-            <h1>Education</h1>
+  <section class="education">
+    <div class="education_header">
+      <h1><i>Education</i></h1>
+    </div>
+    <div class="education_body">
+      <div class="education_body_detail" *ngFor="let item of college">
+        <div>
+          <div class="year">
+            <h6>
+              <strong>{{ item.year }}</strong>
+            </h6>
+          </div>
+          <div class="info">
+            <p>
+              <strong>{{ item.name }}</strong>
+            </p>
+            <p>{{ item.city }}</p>
+            <p>{{ item.class }}: {{ item.percentage }}</p>
+          </div>
         </div>
-    </section>
-    <hr>
-    <section  class="skills">
-        <div class="skills_header">
-            <h1>Skills</h1>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="skills">
+    <div class="skills_header">
+      <h1><i>Skills</i></h1>
+    </div>
+    <div class="skills_body">
+      <div class="skills_body_detail" *ngFor="let item of skills">
+        <div class="skills_body_img">
+          <img [src]="item.icon" [alt]="item.icon_alt" />
         </div>
-    </section>
-    <hr>
-    <section class="experience">
-        <div class="experience_header">
-            <h1>Experience</h1>
+        <div class="detail_main" [matTooltip]="item.details" [matTooltipPosition]="'above'">
+          <h6>
+            <strong>{{ item.heading }}</strong>
+          </h6>
+          <p class="detail">{{ item.details  | lengthControl:300}}</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="experience">
+    <div class="experience_header">
+      <h1><i>Experience</i></h1>
+    </div>
+  </section>
+  <hr />
+  <section class="documents">
+    <div class="documents_header">
+      <h1><i>Documents & Certificates</i></h1>
+    </div>
+  </section>
 </div>
