@@ -32,11 +32,15 @@
         <div class="skills_body_img">
           <img [src]="item.icon" [alt]="item.icon_alt" />
         </div>
-        <div class="detail_main" [matTooltip]="item.details" [matTooltipPosition]="'above'">
+        <div
+          class="detail_main"
+          [matTooltip]="item.details"
+          [matTooltipPosition]="'above'"
+        >
           <h6>
             <strong>{{ item.heading }}</strong>
           </h6>
-          <p class="detail">{{ item.details  | lengthControl:300}}</p>
+          <p class="detail">{{ item.details | lengthControl : 300 }}</p>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { LengthControlPipe } from '../Shared_Pipe/Length_control_Pipe/length-control.pipe';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 type college = {
   year: number;
@@ -21,7 +21,7 @@ type skills = {
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule, NgFor,LengthControlPipe,MatTooltipModule],
+  imports: [CommonModule, NgFor, LengthControlPipe, MatTooltipModule],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
 })
@@ -67,6 +67,4 @@ export class EducationComponent {
       details: `Skilled in fostering effective teamwork and clear communication, which are crucial for successful project outcomes. Proficient in utilizing version control systems like Git and collaboration platforms such as GitHub to streamline workflow and enhance team productivity`,
     },
   ];
-
-  
 }
