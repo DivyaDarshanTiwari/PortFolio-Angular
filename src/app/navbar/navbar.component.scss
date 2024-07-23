@@ -16,12 +16,36 @@ $border: 1px solid white;
     flex-wrap: $wrap;
     align-items:baseline
 }
+@mixin animation($animation_name){
+    opacity:0;
+    animation: $animation_name 1s ease forwards;
+    animation-delay: .7s;
+}
+
+@mixin keyframe($name, $transform_name, $start, $end) {
+    @keyframes #{$name} {
+      0% {
+        opacity: 1;
+        transform: #{$transform_name}($start);
+      }
+      100% {
+        opacity: 1;
+        transform: #{$transform_name}($end);
+      }
+    }
+  }
+  
+  // Usage
+  @include keyframe(slideRight, translateX, -100px, 0px);
+  @include keyframe(slideTop,translateY ,50px ,0px );
+  
 .navbar{
     @include flexbox(space-between,center,wrap );
     padding:padding(l) padding(xl);
     #{&}_left{
         h1{
             font-size: 1.5rem;
+            @include animation(slideRight);
         }
     }
 
@@ -34,13 +58,12 @@ $border: 1px solid white;
                 text-decoration: none;
             }
             p{
+                opacity: 0;
+                @include animation(slideTop);
                 padding: map-get($padding_around, s );
-                transition: all .50s ease-in;
                 border-radius: .25rem;
-                transform: rotate(-50deg);
                 &:hover{
                     border: $border;
-                    transform:rotate(0deg);
                     cursor: pointer;
                 }
             }
