@@ -6,6 +6,11 @@ import {merge} from 'rxjs';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
+type key_value={
+  key:string,
+  value:string
+}
+
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -38,5 +43,10 @@ export class FooterComponent {
 
   protected mail_id: string = "ddarshantiwari@gmail.com";
   protected phone_no :number =  7054396386;
+  protected icons:key_value[] = [
+    {key: "Github.png", value: "https://github.com/DivyaDarshanTiwari"},
+    {key: " LeetCode.webp", value: "https://leetcode.com/u/g5BkYAHUbI/"},
+    {key: "linkdin.png", value: "www.linkedin.com/in/divya-darshan-tiwari-9b6981240/"}
+  ]
 }
 

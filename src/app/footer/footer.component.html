@@ -31,10 +31,16 @@
         </div>
       </div>
       <div class="contacts_sections">
-
+        <div class="img">
+          <h6>Find Me At</h6>
+        </div>
       </div>
       <div class="contacts_sections">
-
+        <ul class="social">
+          @for (item of icons; track item) {
+            <li><a [href]="item.value" target="_blank"><img [src]="item.key" [alt]="item"></a></li>
+          }
+        </ul>
       </div>
     </section>
 </footer>

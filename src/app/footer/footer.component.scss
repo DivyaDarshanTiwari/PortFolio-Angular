@@ -9,9 +9,9 @@ $paddding_margin: 2rem;
     color: $text-color;
   }
 }
-@mixin flex-box($direction) {
+@mixin flex-box($direction, $justify) {
   display: flex;
-  justify-content: center;
+  justify-content: $justify;
   align-items: center;
   flex-direction: $direction;
 }
@@ -19,7 +19,7 @@ footer {
   @include theme(true);
   padding: $paddding_margin;
   .form {
-    @include flex-box(column);
+    @include flex-box(column, center);
     &_input {
       min-width: 30rem;
       mat-form-field {
@@ -29,12 +29,36 @@ footer {
   }
 
   .contacts {
-    margin: $paddding_margin;
+    margin: $paddding_margin 0;
+    @include flex-box(row, space-evenly);
     &_sections {
-        a {
-            text-decoration:underline;
-            color: $text-color;
-          }
+      .img {
+        background-image: url("/Arrow.png");
+        background-repeat: no-repeat;
+        height: 8rem;
+        width: 30rem;
+        text-align: center;
+      }
+      a {
+        text-decoration: underline;
+        color: $text-color;
+      }
+
+      .social{
+        padding-left: 0;
+        position: relative;
+        top: 1rem;
+        right: 3rem;
+        li{
+          text-decoration: none;
+          display: inline-block;
+        }
+        img{
+          width: 8rem;
+          aspect-ratio: 3/2;
+          object-fit: contain;
+        }
+      }
     }
   }
 }
