@@ -2,20 +2,21 @@
   <div class="about_description">
     <div class="intro">
       <div class="intro_heading">
-        <h1>Description</h1>
+        <h3 class="Hello"><b>Hello</b>,It Me</h3>
+        <h1 class="name">
+          {{ name }}
+          <h2>your</h2>
+        </h1>
+        <h2 class="work">
+          <b>{{ designation }}</b>
+        </h2>
       </div>
       <div class="intro_body">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quae
-          nobis aperiam aliquid, atque dolor reprehenderit odit voluptas fugit
-          sit expedita! Dignissimos, cumque voluptatum cupiditate quaerat quod
-          harum cum nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis
-          quis fuga veniam numquam aliquid ex et rem harum officiis iusto
-          expedita, sapiente possimus tempora rerum, doloremque aspernatur quod
-          ratione.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          repudiandae saepe beatae veritatis et aperiam voluptates sunt dicta
+          adipisci? Vero harum vel voluptate temporibus accusantium esse maiores
+          perferendis quod sit!
         </p>
       </div>
     </div>
@@ -26,12 +27,12 @@
       </div>
       <div class="characteristics_card">
         <mat-card appearance="outlined" *ngFor="let item of characteristics">
-          <mat-card-content>{{item}}</mat-card-content>
+          <mat-card-content>{{ item }}</mat-card-content>
         </mat-card>
       </div>
     </div>
   </div>
   <div class="about_img">
-    <img [src]="image" alt="My Image">
+    <img [src]="image" alt="My Image" />
   </div>
 </section>

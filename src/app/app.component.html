@@ -1,9 +1,5 @@
 <div class="page">
   <app-navbar></app-navbar>
-  @defer{
   <router-outlet></router-outlet>
-  } @loading(minimum 1s){
-  <mat-spinner></mat-spinner>
-  }
   <app-footer></app-footer>
 </div>

@@ -19,4 +19,6 @@ export class AboutComponent {
   ];
 
   protected image:string = "Profile_pic.jpg"
+  protected designation:string ="Frontend Angular Developer";
+  protected name:string="Divya Darshan Tiwari"
 }

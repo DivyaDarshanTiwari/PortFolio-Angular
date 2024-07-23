@@ -1,12 +1,12 @@
 $bg-color: black;
 $text-color: white;
+$work-color: rgba(255, 0, 0, 0.397);
 
-@mixin theme($theme:true) {
+@mixin theme($theme: true) {
   @if $theme {
     background-color: $bg-color;
     color: $text-color;
   }
-
 }
 $margin_padding: (
   "s": 0.25rem,
@@ -25,12 +25,61 @@ $margin_padding: (
   align-content: center;
   flex-wrap: $wrap;
 }
+@mixin animation($animation_name) {
+  opacity: 0;
+  animation: $animation_name 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+@mixin keyframe($name, $transform_name, $start, $end) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 1;
+      transform: #{$transform_name }($start);
+    }
+    100% {
+      opacity: 1;
+      transform: #{$transform_name }($end);
+    }
+  }
+}
+
+// Usage
+@include keyframe(slideRight, translateX, -100px, 0px);
+@include keyframe(slideTop, translateY, 100px, 0px);
+@include keyframe(slideBottom, translateY, -100px, 0px);
+@include keyframe(slideLeft, translateX, 100px, 0px);
 .about {
   margin: 6rem;
   @include flex-box(nowrap);
   #{&}_description {
     padding: 0 margin_pad(xxl);
+    .intro {
+      &_heading {
+        .Hello {
+          opacity: 0;
+          @include animation(slideBottom);
+          animation-delay: 0.7s;
+        }
+        .name {
+          letter-spacing: -0.01rem;
+          @include animation(slideRight);
+          animation-delay: 0.7s;
+        }
+        .work {
+          color: $work-color;
+          @include animation(slideTop);
+          animation-delay: 0.7s;
+        }
+      }
+      &_body {
+        @include animation(slideRight);
+        animation-delay: 0.7s;
+      }
+    }
     .characteristics {
+      @include animation(slideRight);
+      animation-delay: 0.7s;
       margin: margin_pad(l);
       &_header {
         h5 {
@@ -43,7 +92,7 @@ $margin_padding: (
           @include theme(true);
           margin: margin_pad(s);
           width: 10rem;
-          &:hover{
+          &:hover {
             cursor: pointer;
             box-shadow: 2px 2px 2px grey;
           }
@@ -53,6 +102,8 @@ $margin_padding: (
   }
 
   #{&}_img {
+    @include animation(slideLeft);
+    animation-delay: .7s;
     max-width: 20rem;
     margin: margin_pad(l);
     img {
