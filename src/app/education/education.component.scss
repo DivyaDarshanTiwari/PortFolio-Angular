@@ -1,4 +1,14 @@
-$margin: 4rem;
+$margin_padding: (
+  "s": 0.25rem,
+  "m": 0.5rem,
+  "l": 1rem,
+  "xl": 2rem,
+  "xxl": 4rem,
+);
+
+@function margin_pad($size) {
+  @return map-get($margin_padding, $size);
+}
 .container{
-    margin: $margin;
+    margin: margin_pad(xxl);
 }
