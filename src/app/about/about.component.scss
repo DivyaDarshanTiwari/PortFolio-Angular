@@ -77,6 +77,11 @@ $margin_padding: (
         animation-delay: 0.7s;
       }
     }
+    hr{
+      opacity: 0;
+      @include animation(slideLeft);
+      animation-delay: 0.7s;
+    }
     .characteristics {
       @include animation(slideRight);
       animation-delay: 0.7s;
