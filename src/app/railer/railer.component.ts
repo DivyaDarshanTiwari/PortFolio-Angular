@@ -12,7 +12,7 @@ import { MatTooltip } from '@angular/material/tooltip';
   standalone: true,
   imports: [MatIcon, CommonModule, RouterModule, MatTooltip],
   templateUrl: './railer.component.html',
-  styleUrls: ['./railer.component.css'],
+  styleUrls: ['./railer.component.scss'],
 })
 export class RailerComponent {
   @ViewChild('prevButton') prevButtonRef!: ElementRef<HTMLElement>;
