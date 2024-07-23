@@ -67,4 +67,6 @@ export class EducationComponent {
       details: `Skilled in fostering effective teamwork and clear communication, which are crucial for successful project outcomes. Proficient in utilizing version control systems like Git and collaboration platforms such as GitHub to streamline workflow and enhance team productivity`,
     },
   ];
+
+  
 }
