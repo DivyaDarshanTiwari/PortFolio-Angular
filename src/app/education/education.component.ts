@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { LengthControlPipe } from '../Shared_Pipe/Length_control_Pipe/length-control.pipe';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { RailerComponent } from '../railer/railer.component';
 
 type college = {
   year: number;
@@ -21,7 +22,7 @@ type skills = {
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule, NgFor, LengthControlPipe, MatTooltipModule],
+  imports: [CommonModule, NgFor, LengthControlPipe, MatTooltipModule,RailerComponent],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
 })
