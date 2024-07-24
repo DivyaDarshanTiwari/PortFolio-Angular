@@ -1,3 +1,4 @@
+@import '../../shared_scss/animation';
 $bg-color: black;
 $text-color: white;
 $work-color: rgba(255, 0, 0, 0.397);
@@ -25,30 +26,7 @@ $margin_padding: (
   align-content: center;
   flex-wrap: $wrap;
 }
-@mixin animation($animation_name) {
-  opacity: 0;
-  animation: $animation_name 1s ease forwards;
-  animation-delay: 0.7s;
-}
 
-@mixin keyframe($name, $transform_name, $start, $end) {
-  @keyframes #{$name} {
-    0% {
-      opacity: 1;
-      transform: #{$transform_name }($start);
-    }
-    100% {
-      opacity: 1;
-      transform: #{$transform_name }($end);
-    }
-  }
-}
-
-// Usage
-@include keyframe(slideRight, translateX, -100px, 0px);
-@include keyframe(slideTop, translateY, 100px, 0px);
-@include keyframe(slideBottom, translateY, -100px, 0px);
-@include keyframe(slideLeft, translateX, 100px, 0px);
 .about {
   margin: 6rem;
   @include flex-box(nowrap);
@@ -58,33 +36,28 @@ $margin_padding: (
       &_heading {
         .Hello {
           opacity: 0;
-          @include animation(slideBottom);
-          animation-delay: 0.7s;
+          @include animation(slideBottom,0.5s);
         }
         .name {
           letter-spacing: -0.01rem;
-          @include animation(slideRight);
-          animation-delay: 0.7s;
+          @include animation(slideRight,0.5s);
         }
         .work {
           color: $work-color;
-          @include animation(slideTop);
-          animation-delay: 0.7s;
+          @include animation(slideTop,0.5s);
         }
       }
       &_body {
-        @include animation(slideRight);
-        animation-delay: 0.7s;
+        @include animation(slideRight,0.5s);
       }
     }
     hr{
       opacity: 0;
-      @include animation(slideLeft);
-      animation-delay: 0.7s;
+      @include animation(slideLeft,0.5s);
     }
     .characteristics {
-      @include animation(slideRight);
-      animation-delay: 0.7s;
+      @include animation(slideRight,0.5s);
+      animation-delay: 0.5s;
       margin: margin_pad(l);
       &_header {
         h5 {
@@ -107,8 +80,7 @@ $margin_padding: (
   }
 
   #{&}_img {
-    @include animation(slideLeft);
-    animation-delay: .7s;
+    @include animation(slideLeft,0.5s);
     max-width: 20rem;
     margin: margin_pad(l);
     img {
