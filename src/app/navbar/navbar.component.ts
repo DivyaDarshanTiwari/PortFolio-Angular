@@ -13,7 +13,7 @@ import { MatRipple } from '@angular/material/core';
 })
 export class NavbarComponent {
 
-  protected pages=["Education", "Projects", "About"];
+  protected pages=["About","Education", "Projects"];
 
   protected ripple_color:string = "rgba(0, 0, 0, 1)";
 }
