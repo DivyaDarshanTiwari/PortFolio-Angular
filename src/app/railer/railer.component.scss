@@ -1,12 +1,12 @@
 .slider-section {
   position: relative;
-  width: 80rem;
+  min-width: 80rem;
   overflow: hidden;
   margin: 40px;
 }
 
 .card-container {
-  width: 80rem;
+  min-width: 80rem;
   position: relative;
   display: flex;
   justify-content: space-evenly;
