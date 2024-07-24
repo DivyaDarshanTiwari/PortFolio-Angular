@@ -1,0 +1,22 @@
+@mixin keyframe($name, $transform_name, $start, $end) {
+    @keyframes #{$name} {
+      0% {
+        opacity: 1;
+        transform: #{$transform_name }($start);
+      }
+      100% {
+        opacity: 1;
+        transform: #{$transform_name }($end);
+      }
+    }
+  }
+  @mixin animation($animation_name,$delay) {
+    opacity: 0;
+    animation: $animation_name 1s ease forwards;
+    animation-delay: #{$delay};
+  }
+  // Usage
+  @include keyframe(slideRight, translateX, -100px, 0px);
+  @include keyframe(slideTop, translateY, 100px, 0px);
+  @include keyframe(slideBottom, translateY, -100px, 0px);
+  @include keyframe(slideLeft, translateX, 100px, 0px);
