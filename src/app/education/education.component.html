@@ -57,9 +57,12 @@
   <hr />
   <section class="documents">
     <div class="documents_header">
-      <h1><i>Documents & Certificates</i></h1>
+      <h1><i>Documents & Certificates</i><mat-icon>download</mat-icon></h1>
     </div>
-    <div class="documents_body">
+    <div class="documents_body" >
+      <mat-card appearance="outlined" class="card" *ngFor="let item of documents">
+        <a [href]="item.documnet_link" download><mat-card-content>{{item.document_name}}</mat-card-content></a>
+      </mat-card>
     </div>
   </section>
 </div>

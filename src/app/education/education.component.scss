@@ -6,13 +6,15 @@ $margin_padding: (
   "xxl": 4rem,
 );
 $year-color: rgb(45, 136, 205);
+$bg-color:black;
+$text-color:white;
 
-@mixin flexbox($justify, $align, $wrap) {
+@mixin flexbox($justify, $align, $wrap,$align_item) {
   display: flex;
   justify-content: $justify;
   align-content: $align;
   flex-wrap: $wrap;
-  align-items: baseline;
+  align-items: $align_item;
 }
 
 @function margin_pad($size) {
@@ -23,7 +25,7 @@ $year-color: rgb(45, 136, 205);
   margin: margin_pad(xxl);
   .education {
     &_body {
-      @include flexbox(space-evenly, center, wrap);
+      @include flexbox(space-evenly, center, wrap,baseline);
       &_detail {
         text-align: center;
         .year {
@@ -37,7 +39,7 @@ $year-color: rgb(45, 136, 205);
   }
   .skills {
     &_body {
-      @include flexbox(space-evenly, center, wrap);
+      @include flexbox(space-evenly, center, wrap,baseline);
       &_detail {
         max-width: 30rem;
         .skills_body_img {
@@ -46,6 +48,29 @@ $year-color: rgb(45, 136, 205);
             aspect-ratio: 3/2;
             object-fit: contain;
           }
+        }
+      }
+    }
+  }
+
+  .documents{
+    &_header{
+      mat-icon{
+        padding: margin_pad(s);
+        margin: margin_pad(l) 0 0 margin_pad(l);
+        background-color: $bg-color;
+        color: $text-color;
+        border-radius: .75rem;
+      }
+    }
+    &_body{
+      @include flexbox(space-evenly,center ,wrap,center );
+      .card{
+        max-width: 10rem;
+        background-color: $bg-color;
+        a{
+          color: $text-color;
+          text-decoration: none;
         }
       }
     }
