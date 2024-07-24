@@ -42,6 +42,14 @@ export class RailerComponent {
       date_end:'Present',
       company:'MTC UPES',
       designation:'Events and Records Core Committe Member'
+    },
+    {
+      img: 'YES.jpeg',
+      alt: 'YES',
+      date_start:'June 2023',
+      date_end:'July 2023',
+      company:'Yeh Ek Soch Foundation',
+      designation:'Internship'
     }
   ];
   prevfun() {
