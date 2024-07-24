@@ -7,6 +7,14 @@ import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatTooltip } from '@angular/material/tooltip';
+type experience ={
+  img: string,
+  alt: string,
+  date_start:string,
+  date_end:string,
+  company:string,
+  designation:string
+}
 @Component({
   selector: 'app-railer',
   standalone: true,
@@ -18,14 +26,22 @@ export class RailerComponent {
   @ViewChild('prevButton') prevButtonRef!: ElementRef<HTMLElement>;
   @ViewChild('nextButton') nextButtonRef!: ElementRef<HTMLElement>;
 
-  protected item = [
+  protected item:experience[] = [
     {
-      img: 'Github.png',
-      alt: 'Github',
+      img: 'enveu.webp',
+      alt: 'Enveu Img',
+      date_start:'Jun 2024',
+      date_end:'Present',
+      company:'Enveu',
+      designation:'Internship'
     },
     {
-      img: 'LeetCode.webp',
-      alt: 'LeetCode',
+      img: 'upesmtc.png',
+      alt: 'UPES MTC',
+      date_start:'Nov 2023',
+      date_end:'Present',
+      company:'MTC UPES',
+      designation:'Events and Records Core Committe Member'
     }
   ];
   prevfun() {

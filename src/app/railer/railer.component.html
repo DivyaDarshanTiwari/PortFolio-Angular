@@ -1,10 +1,17 @@
 <section class="slider-section">
   <div class="card-container">
     <div class="images" *ngFor="let i of item">
+      <div>
         <img
-          [src]="i.img"
-          alt="{{ i.alt }}"
-        />
+        [src]="i.img"
+        alt="{{ i.alt }}"
+      />
+      </div>
+      <div class="details">
+        <p>{{i.date_start}}-{{i.date_end}}</p>
+        <p><strong>{{i.company}}</strong></p>
+        <p><strong>{{i.designation}}</strong></p>
+      </div>
     </div>
   </div>
 
