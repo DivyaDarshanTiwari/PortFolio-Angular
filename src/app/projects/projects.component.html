@@ -7,7 +7,7 @@
         <div class="project_body_card" *ngFor="let item of projects">
             <a [href]="item.link">
             <mat-card class="mat"  appearance="outlined" >
-                <img mat-card-image [src]="item.img" [alt]="item.project_name">
+                <img mat-card-image [alt]="item.project_name" [lazyLoad]="item.img" [defaultImage]="not_found">
                 <mat-card-content class="card_details">
                     <h6>{{item.project_name}}</h6>
                     <div class="about">

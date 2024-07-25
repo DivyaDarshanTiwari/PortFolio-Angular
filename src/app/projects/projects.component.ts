@@ -1,6 +1,7 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { LazyLoadImageModule } from 'ng-lazyload-image'; 
 
 type project = {
   project_name: string;
@@ -12,12 +13,13 @@ type project = {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCardModule, CommonModule, NgFor],
+  imports: [MatCardModule, CommonModule, NgFor,LazyLoadImageModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent {
+  protected not_found = "404not.png";
   protected projects: project[] = [
     {
       project_name: 'Dummy_Hotstar',
