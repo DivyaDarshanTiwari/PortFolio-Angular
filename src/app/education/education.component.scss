@@ -1,11 +1,4 @@
 @import '../shared_scss/animation';
-$margin_padding: (
-  "s": 0.25rem,
-  "m": 0.5rem,
-  "l": 1rem,
-  "xl": 2rem,
-  "xxl": 4rem,
-);
 $year-color: rgb(45, 136, 205);
 $bg-color:black;
 $text-color:white;
@@ -18,9 +11,6 @@ $text-color:white;
   align-items: $align_item;
 }
 
-@function margin_pad($size) {
-  @return map-get($margin_padding, $size);
-}
 .container {
   cursor: default;
   margin: margin_pad(xxl);

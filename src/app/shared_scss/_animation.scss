@@ -20,3 +20,15 @@
   @include keyframe(slideTop, translateY, 100px, 0px);
   @include keyframe(slideBottom, translateY, -100px, 0px);
   @include keyframe(slideLeft, translateX, 100px, 0px);
+
+  $margin_padding: (
+  "s": 0.25rem,
+  "m": 0.5rem,
+  "l": 1rem,
+  "xl": 2rem,
+  "xxl": 4rem,
+);
+
+@function margin_pad($size) {
+  @return map-get($margin_padding, $size);
+}

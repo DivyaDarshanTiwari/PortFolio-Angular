@@ -1,0 +1,54 @@
+@import '../shared_scss/animation';
+
+$bg-color:black;
+$text-color:white;
+@mixin flexbox($justify, $align, $wrap,$align_item) {
+    display: flex;
+    justify-content: $justify;
+    align-content: $align;
+    flex-wrap: $wrap;
+    align-items: $align_item;
+  }
+
+$max-height: 25rem;
+$margin:.5rem;
+
+.project{
+    margin: margin_pad(xxl);
+    &_body{
+        @include flexbox(space-evenly,center ,wrap , center);
+            &_card {
+                min-width: 30rem;
+                max-width: 40rem;
+                max-height: $max-height+5rem;
+                border-radius: 4px;
+                margin: $margin;
+                img{
+                    min-height: $max-height;
+                    border-radius: inherit;
+                }
+                .card_details{
+                    @include flexbox(space-between,center ,wrap , center);
+                    padding: 1rem;
+                    h6{
+                        margin: $margin;
+                    }
+                    .about{
+                        background-color: $bg-color;
+                        color: $text-color;
+                        display: grid;
+                        justify-content: space-between;
+                        align-items: center;
+                        grid-auto-flow: column;
+                        p{
+                            margin: $margin;
+                        }
+                        .features{
+                            margin: 2px;
+                        }
+
+                    }
+                }
+              }            
+    }
+}

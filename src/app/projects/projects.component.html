@@ -1,1 +1,19 @@
-<p>projects works!</p>
+<section class="project">
+    <header class="project_header">
+        <h1>Past Projects</h1>
+    </header>
+    <hr>
+    <body class="project_body" >
+            <mat-card class="project_body_card" appearance="outlined" *ngFor="let item of projects">
+                <img mat-card-image [src]="item.img" [alt]="item.project_name">
+                <mat-card-content class="card_details">
+                    <h6>{{item.project_name}}</h6>
+                    <div class="about">
+                        <div class="features" *ngFor="let feature of item.features">
+                            <p>{{feature}}</p>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+    </body>
+</section>

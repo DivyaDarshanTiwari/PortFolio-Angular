@@ -9,17 +9,6 @@ $work-color: rgba(255, 0, 0, 0.397);
     color: $text-color;
   }
 }
-$margin_padding: (
-  "s": 0.25rem,
-  "m": 0.5rem,
-  "l": 1rem,
-  "xl": 2rem,
-  "xxl": 4rem,
-);
-
-@function margin_pad($size) {
-  @return map-get($margin_padding, $size);
-}
 @mixin flex-box($wrap) {
   display: flex;
   justify-content: left;
