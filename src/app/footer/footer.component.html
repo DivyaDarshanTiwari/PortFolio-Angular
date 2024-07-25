@@ -11,12 +11,16 @@
                 placeholder="pat@example.com"
                 [formControl]="email"
                 (blur)="updateErrorMessage()"
+                (keydown)="onKeydown($event)"
                 required
               />
               @if (email.invalid) {
                 <mat-error>{{errorMessage()}}</mat-error>
               }
             </mat-form-field>
+            @if(entered_or_not){
+              <p style="color: seagreen;">Email sent</p>
+            }
           </div>
     </section>
     <section class="contacts">

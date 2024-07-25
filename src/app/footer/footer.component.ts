@@ -40,13 +40,29 @@ export class FooterComponent {
       this.errorMessage.set('');
     }
   }
-
+  protected entered_or_not=false;
+  protected contacting_email:string[] =[];
   protected mail_id: string = "ddarshantiwari@gmail.com";
   protected phone_no :number =  7054396386;
   protected icons:key_value[] = [
     {key: "Github.png", value: "https://github.com/DivyaDarshanTiwari"},
     {key: " LeetCode.webp", value: "https://leetcode.com/u/g5BkYAHUbI/"},
     {key: "linkdin.png", value: "https://www.linkedin.com/in/divya-darshan-tiwari-9b6981240/"}
-  ]
+  ];
+
+  onKeydown(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      this.entered_email();
+      this.entered_or_not=true;
+    }
+  }
+
+  private entered_email(){
+    if(this.email.value && !(this.contacting_email.includes(this.email.value))){
+      this.contacting_email.push(this.email.value);
+      console.log(this.contacting_email);
+    }
+  }
 }
 
