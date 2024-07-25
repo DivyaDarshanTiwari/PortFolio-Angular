@@ -4,7 +4,9 @@
     </header>
     <hr>
     <body class="project_body" >
-            <mat-card class="project_body_card" appearance="outlined" *ngFor="let item of projects">
+        <div class="project_body_card" *ngFor="let item of projects">
+            <a [href]="item.link">
+            <mat-card class="mat"  appearance="outlined" >
                 <img mat-card-image [src]="item.img" [alt]="item.project_name">
                 <mat-card-content class="card_details">
                     <h6>{{item.project_name}}</h6>
@@ -15,5 +17,7 @@
                     </div>
                 </mat-card-content>
             </mat-card>
+        </a>
+        </div>
     </body>
 </section>

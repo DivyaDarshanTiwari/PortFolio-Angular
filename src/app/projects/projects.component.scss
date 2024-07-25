@@ -18,35 +18,48 @@ $margin:.5rem;
     &_body{
         @include flexbox(space-evenly,center ,wrap , center);
             &_card {
-                min-width: 30rem;
-                max-width: 40rem;
-                max-height: $max-height+5rem;
-                border-radius: 4px;
-                margin: $margin;
-                img{
-                    min-height: $max-height;
-                    border-radius: inherit;
+                a{
+                    color: $bg-color;
+                    text-decoration: none;
                 }
-                .card_details{
-                    @include flexbox(space-between,center ,wrap , center);
-                    padding: 1rem;
-                    h6{
-                        margin: $margin;
+                .mat{
+                    min-width: 30rem;
+                    max-width: 40rem;
+                    max-height: $max-height+5rem;
+                    border-radius: 4px;
+                    margin: $margin;
+                    overflow: hidden;
+                    img{
+                        border-radius: inherit;
+                        filter: blur(4px);
+                        transform: rotate(-2deg);
+                        transition: transform .2s ease;
                     }
-                    .about{
-                        background-color: $bg-color;
-                        color: $text-color;
-                        display: grid;
-                        justify-content: space-between;
-                        align-items: center;
-                        grid-auto-flow: column;
-                        p{
+                    img:hover{
+                        filter: blur(0px);
+                        transform: rotate(0deg);
+                    }
+                    .card_details{
+                        @include flexbox(space-between,center ,wrap , center);
+                        padding: 1rem;
+                        h6{
                             margin: $margin;
                         }
-                        .features{
-                            margin: 2px;
+                        .about{
+                            background-color: $bg-color;
+                            color: $text-color;
+                            display: grid;
+                            justify-content: space-between;
+                            align-items: center;
+                            grid-auto-flow: column;
+                            p{
+                                margin: $margin;
+                            }
+                            .features{
+                                margin: 2px;
+                            }
+    
                         }
-
                     }
                 }
               }            
