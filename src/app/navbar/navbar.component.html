@@ -5,10 +5,10 @@
     <div class="navbar_right" >
         <div class="navbar_right_pages"  *ngFor="let item of pages" >
             @if(item == 'About'){
-                <a routerLink=""><p matRipple  [matRippleColor]="ripple_color" >{{item}}</p></a>
+                <a href="#"><p matRipple  [matRippleColor]="ripple_color" >{{item}}</p></a>
             }
             @else {
-                <a [routerLink]="item"><p matRipple  [matRippleColor]="ripple_color">{{item}}</p></a>
+                <a [href]="'#'+ item"><p matRipple  [matRippleColor]="ripple_color">{{item}}</p></a>
             }
         </div>
     </div>
