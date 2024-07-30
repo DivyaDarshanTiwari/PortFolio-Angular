@@ -13,11 +13,17 @@ $text-color:white;
 $max-height: 25rem;
 $margin:.5rem;
 
+.visible{
+    @include animation(slideLeft,0.3s);
+}
+
 .project{
     margin: margin_pad(xxl);
+    opacity: 0;
     &_body{
         @include flexbox(space-evenly,center ,wrap , center);
             &_card {
+                opacity: 0;
                 a{
                     color: $bg-color;
                     text-decoration: none;

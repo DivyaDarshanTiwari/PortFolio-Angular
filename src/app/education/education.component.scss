@@ -11,11 +11,16 @@ $text-color:white;
   align-items: $align_item;
 }
 
+.visible{
+  @include animation(slideRight,0.3s);
+}
+
 .container {
   cursor: default;
   margin: margin_pad(xxl);
+  opacity: 0;
   .education {
-    @include animation(slideRight,0.3s);
+    opacity: 0;
     &_body {
       @include flexbox(space-evenly, center, wrap,baseline);
       &_detail {
@@ -30,7 +35,8 @@ $text-color:white;
     }
   }
   .skills {
-    @include animation(slideLeft,0.4s);
+    // @include animation(slideLeft,0.4s);
+    opacity: 0;
     &_body {
       @include flexbox(space-evenly, center, wrap,baseline);
       &_detail {
@@ -46,11 +52,13 @@ $text-color:white;
     }
   }
   .experience{
-    @include animation(slideRight,0.5s);
+    // @include animation(slideRight,0.5s);
+    opacity: 0;
   }
 
   .documents{
-    @include animation(slideLeft,0.6s);
+    // @include animation(slideLeft,0.6s);
+    opacity: 0;
     &_header{
       mat-icon{
         padding: margin_pad(s);

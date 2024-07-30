@@ -2,6 +2,7 @@ import { CommonModule, NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { LazyLoadImageModule } from 'ng-lazyload-image'; 
+import { LazyLoadImageDirective } from '../Directives/lazy-load-image.directive';
 
 type project = {
   project_name: string;
@@ -13,7 +14,7 @@ type project = {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCardModule, CommonModule, NgFor,LazyLoadImageModule],
+  imports: [MatCardModule, CommonModule, NgFor,LazyLoadImageModule,LazyLoadImageDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

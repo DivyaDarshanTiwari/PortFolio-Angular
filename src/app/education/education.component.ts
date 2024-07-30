@@ -5,6 +5,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RailerComponent } from '../railer/railer.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
+import { LazyLoadImageDirective } from '../Directives/lazy-load-image.directive';
 type college = {
   year: number;
   name: string;
@@ -34,7 +35,8 @@ type document ={
     MatTooltipModule,
     RailerComponent,
     MatCardModule,
-    MatIcon
+    MatIcon,
+    LazyLoadImageDirective
   ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
