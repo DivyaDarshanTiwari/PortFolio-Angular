@@ -12,5 +12,8 @@ export const routes: Routes = [
     {
         path:"Projects",
         loadComponent:()=> import('../app/projects/projects.component').then((m) => m.ProjectsComponent)
+    },{
+        path:'main',
+        loadComponent:()=> import('../app/main/main.component').then((m)=>m.MainComponent)
     }
 ];
