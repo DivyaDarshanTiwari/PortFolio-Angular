@@ -73,6 +73,7 @@ $work-color: rgba(255, 0, 0, 0.397);
     max-width: 20rem;
     margin: margin_pad(l);
     img {
+      border-radius: 4px;
       max-width: 100%;
     }
   }
