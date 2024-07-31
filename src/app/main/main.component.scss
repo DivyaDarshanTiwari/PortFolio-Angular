@@ -1,11 +1,14 @@
-/* In your global styles or component-specific styles */
-.lazy-load {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+a{
+  text-decoration: none;
+  color: white;
+  .up{
+    padding: 1rem;
+    border-radius: 5rem;
+    background-color: grey;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2px;
   }
-  
-  .lazy-load.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+
