@@ -26,7 +26,7 @@ export class ProjectsComponent {
       project_name: 'Dummy_Hotstar',
       features: ['Roubust', 'Secure'],
       img: 'Dummy_Hotstar.png',
-      link: 'https://divyadarshantiwari.github.io/Dummy_Hotstar/',
+      link: 'https://dummy-hotstar-5dlv1q76y-divya-darshan-tiwaris-projects.vercel.app',
     },
     {
       project_name: 'BitCoin',
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       project_name: 'TodoList',
       features: ['SimpleUI', 'Priority'],
       img: 'TodoList.png',
-      link: '',
+      link: 'https://todo-list-angular-n94anizmj-divya-darshan-tiwaris-projects.vercel.app',
     },
     {
       project_name: 'Invoice Genetation Landing page',

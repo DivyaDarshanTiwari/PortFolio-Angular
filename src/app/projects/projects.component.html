@@ -5,7 +5,7 @@
     <hr>
     <body class="project_body" >
         <div class="project_body_card" *ngFor="let item of projects" appLazyLoadImage>
-            <a [href]="item.link">
+            <a [href]="item.link" target="_blank">
             <mat-card class="mat"  appearance="outlined" >
                 <img mat-card-image [alt]="item.project_name" [lazyLoad]="item.img" [defaultImage]="not_found">
                 <mat-card-content class="card_details">
