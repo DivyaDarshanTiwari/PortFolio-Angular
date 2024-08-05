@@ -41,7 +41,7 @@ $border: 1px solid white;
   
 .navbar{
     @include flexbox(space-between,center,wrap );
-    padding:padding(l) padding(xl);
+    padding:padding(me) padding(xl);
     #{&}_left{
         h1{
             font-size: 1.5rem;
@@ -56,15 +56,16 @@ $border: 1px solid white;
             padding: padding(l);
             a{
                 text-decoration: none;
-            }
-            p{
-                opacity: 0;
-                @include animation(slideTop);
-                padding: map-get($padding_around, s );
-                border-radius: .25rem;
-                &:hover{
-                    border: $border;
-                    cursor: pointer;
+                p{
+                    background-color: transparent;
+                    opacity: 0;
+                    @include animation(slideTop);
+                    padding: map-get($padding_around, s );
+                    border-radius: .25rem;
+                    &:hover{
+                        border: $border;
+                        cursor: pointer;
+                    }
                 }
             }
         }
