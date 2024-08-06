@@ -1,5 +1,10 @@
 <div class="page">
-  <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  @defer{
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  }
+  @placeholder {
+    <h1 style="align-content: center; text-align: center; height: 50rem;">Loading...</h1>
+  }
 </div>
